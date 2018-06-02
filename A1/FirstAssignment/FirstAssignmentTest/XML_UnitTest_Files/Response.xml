@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<order>
+  <orderitems>
+    <item>
+      <result>failure</result>
+      <errormessage>invalid part number</errormessage>
+    </item>
+  </orderitems>
+</order>
