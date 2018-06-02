@@ -26,7 +26,7 @@ Assignment1 is developed using C# .NET Technology using Visual Studio IDE. This 
 
 ## Instructions to run the program
 
-* Please start the application.</br>
+* Please rebuild the complete solution.</br>
 * In the terminal, please provide input xml and output xml file path. </br>
 * Please run the test cases present in FirstAssignmentTest project</br>
 
