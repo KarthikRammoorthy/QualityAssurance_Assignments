@@ -175,21 +175,33 @@ namespace FirstAssignment.Controller
 
         public static void Main(string[] args)
         {
-            //Input XML File
-            Console.WriteLine("Please Enter Input File Path");
-            var inputFile = Console.ReadLine();
-            Console.WriteLine("Please Enter Output File Path");
-            var outputFile = Console.ReadLine();
 
-            //Resolving dependency
-            var container = new UnityContainer();
-            container.RegisterType<IPartManager, PartManager>();
-            container.RegisterType<ISecurity, Security>();
-            ActionController objActionController = container.Resolve<ActionController>();
-            Order XmlData = objActionController.XMLDeserializer(inputFile);
-            objActionController.ValidateXML(outputFile, XmlData);
-            //Console.WriteLine("Validation: {0}", IsValid? "Success" : "Failure");
-            Console.Read();
+            try
+            {
+
+                //Input XML File
+                Console.WriteLine("Please Enter Input File Path");
+                var inputFile = Console.ReadLine();
+                Console.WriteLine("Please Enter Output File Path");
+                var outputFile = Console.ReadLine();
+
+                //Resolving dependency
+                var container = new UnityContainer();
+                container.RegisterType<IPartManager, PartManager>();
+                container.RegisterType<ISecurity, Security>();
+                ActionController objActionController = container.Resolve<ActionController>();
+                Order XmlData = objActionController.XMLDeserializer(inputFile);
+                objActionController.ValidateXML(outputFile, XmlData);
+                Console.WriteLine("Process Complete. Please check output file.");
+                //Console.WriteLine("Validation: {0}", IsValid? "Success" : "Failure");
+                Console.Read();
+
+            }
+
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
 
 
         }

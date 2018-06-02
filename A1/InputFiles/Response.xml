@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<order>
+  <result>failure</result>
+  <error>Invalid Order</error>
+  <errormessage>Invalid Order Item Type</errormessage>
+</order>
